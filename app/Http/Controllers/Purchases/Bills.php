@@ -15,6 +15,7 @@ use App\Jobs\Document\UpdateDocument;
 use App\Models\Document\Document;
 use App\Traits\Documents;
 
+test
 class Bills extends Controller
 {
     use Documents;
