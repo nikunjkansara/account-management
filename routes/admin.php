@@ -153,6 +153,9 @@ Route::group(['prefix' => 'banking'], function () {
     Route::post('reconciliations/calculate', 'Banking\Reconciliations@calculate')->middleware(['money']);
     Route::patch('reconciliations/calculate', 'Banking\Reconciliations@calculate')->middleware(['money']);
     Route::resource('reconciliations', 'Banking\Reconciliations', ['middleware' => ['date.format', 'money', 'dropzone']]);
+
+    # Added new row
+    Route::get('transfers/export', 'Banking\Transfers@export')->name('test');
 });
 
 Route::group(['prefix' => 'settings'], function () {
